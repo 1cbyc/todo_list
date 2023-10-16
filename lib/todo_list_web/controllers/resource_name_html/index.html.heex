@@ -1,0 +1,23 @@
+<.header>
+  Listing Singular resource name
+  <:actions>
+    <.link href={~p"/singular_resource_name/new"}>
+      <.button>New Resource name</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table id="singular_resource_name" rows={@singular_resource_name} row_click={&JS.navigate(~p"/singular_resource_name/#{&1}")}>
+  <:col :let={resource_name} label="Attributes"><%= resource_name.attributes %></:col>
+  <:action :let={resource_name}>
+    <div class="sr-only">
+      <.link navigate={~p"/singular_resource_name/#{resource_name}"}>Show</.link>
+    </div>
+    <.link navigate={~p"/singular_resource_name/#{resource_name}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={resource_name}>
+    <.link href={~p"/singular_resource_name/#{resource_name}"} method="delete" data-confirm="Are you sure?">
+      Delete
+    </.link>
+  </:action>
+</.table>

@@ -1,0 +1,8 @@
+<.header>
+  Edit Resource name <%= @resource_name.id %>
+  <:subtitle>Use this form to manage resource_name records in your database.</:subtitle>
+</.header>
+
+<.resource_name_form changeset={@changeset} action={~p"/singular_resource_name/#{@resource_name}"} />
+
+<.back navigate={~p"/singular_resource_name"}>Back to singular_resource_name</.back>

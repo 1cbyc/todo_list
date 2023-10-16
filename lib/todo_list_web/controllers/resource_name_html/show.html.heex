@@ -1,0 +1,15 @@
+<.header>
+  Resource name <%= @resource_name.id %>
+  <:subtitle>This is a resource_name record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/singular_resource_name/#{@resource_name}/edit"}>
+      <.button>Edit resource_name</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Attributes"><%= @resource_name.attributes %></:item>
+</.list>
+
+<.back navigate={~p"/singular_resource_name"}>Back to singular_resource_name</.back>
