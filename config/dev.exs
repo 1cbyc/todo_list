@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :todo_list, TodoList.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "Alora2018!",
   hostname: "localhost",
   database: "todo_list_dev",
   stacktrace: true,
