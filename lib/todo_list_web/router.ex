@@ -6,7 +6,7 @@ defmodule TodoListWeb.Router do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, html: {TodoListWeb.Layouts, :root}
+    plug :put_root_layout, html: {TodoListWeb.LayoutView, "page.html"}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -18,7 +18,14 @@ defmodule TodoListWeb.Router do
   scope "/" do
     pipe_through :browser
 
-    pow_routes()
+    pow_routes(%{
+      user: TodoList.Users.User, # Replace with your user module
+      repo: TodoList.Repo,
+      adapter: Pow.Ecto.Repo,
+      layout: {TodoListWeb.LayoutView, "page.html"},
+      error_view: TodoListWeb.ErrorView,
+      routes: TodoListWeb.Router
+    })
   end
 
   scope "/", TodoListWeb do
