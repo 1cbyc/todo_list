@@ -51,7 +51,7 @@ defmodule TodoList.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:plug_cowboy, "~> 2.5"}
-      {:pow, "~> 1.0"}
+      {:pow, "~> 1.0"},
       {:comeonin, "~> 5.1"},
       {:phoenix_ecto, "~> 4.4"},
       {:ecto_sql, "~> 3.10"},
