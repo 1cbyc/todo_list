@@ -1,5 +1,6 @@
 defmodule TodoListWeb.Router do
   use TodoListWeb, :router
+  use Pow.Phoenix.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -12,6 +13,12 @@ defmodule TodoListWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+  end
+
+  scope "/" do
+    pipe_through :browser
+
+    pow_routes()
   end
 
   scope "/", TodoListWeb do
