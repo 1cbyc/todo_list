@@ -11,6 +11,16 @@ config :todo_list,
   ecto_repos: [TodoList.Repo],
   generators: [timestamp_type: :utc_datetime]
 
+# Pow Configuration
+pow: [
+  user: TodoList.Users.User,
+  repo: TodoList.Repo,
+  adapter: Pow.Ecto.Repo,
+  layout: {TodoListWeb.LayoutView, "page.html"},
+  error_view: TodoListWeb.ErrorView,
+  routes: TodoListWeb.Router
+]
+
 # Configures the endpoint
 config :todo_list, TodoListWeb.Endpoint,
   url: [host: "localhost"],
