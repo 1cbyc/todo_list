@@ -4,6 +4,7 @@
   "main": "tailwind.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    "build:css": "postcss assets/css/app.css -o static/css/app.css"
   },
   "keywords": [],
   "author": "",
