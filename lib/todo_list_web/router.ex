@@ -18,8 +18,9 @@ defmodule TodoListWeb.Router do
   scope "/" do
     pipe_through :browser
 
+    # Pow routing configuration
     pow_routes(%{
-      user: TodoList.Users.User, # Replace with your user module
+      user: YourApp.Users.User,  # Replace with your user module
       repo: TodoList.Repo,
       adapter: Pow.Ecto.Repo,
       layout: {TodoListWeb.LayoutView, "page.html"},
@@ -27,6 +28,7 @@ defmodule TodoListWeb.Router do
       routes: TodoListWeb.Router
     })
   end
+
 
   scope "/", TodoListWeb do
     pipe_through :browser
