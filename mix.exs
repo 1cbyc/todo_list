@@ -53,8 +53,6 @@ defmodule TodoList.MixProject do
       {:plug_cowboy, "~> 2.5"}
       {:pow, "~> 1.0"},
       {:comeonin, "~> 5.1"},
-      {:phoenix_ecto, "~> 4.4"},
-      {:ecto_sql, "~> 3.10"},
     ]
   end
 
