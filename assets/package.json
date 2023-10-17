@@ -8,7 +8,7 @@
     "devDependencies": {
       "autoprefixer": "^10.4.3",
       "postcss": "^8.4.5",
-      "postcss-cli": "^11.0.1",
+      "postcss-cli": "^8.2.1",
       "postcss-loader": "^6.2.0",
       "tailwindcss": "^2.2.19",
       "@tailwindcss/postcss7-compat": "^2.2.3"
