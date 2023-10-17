@@ -21,6 +21,7 @@ config :todo_list, TodoListWeb.Endpoint,
   ],
   pubsub_server: TodoList.PubSub,
   live_view: [signing_salt: "7m4bmrcF"]
+  http: [port: 5000]  # I changed the port here, entire line can be removed
 
 # Configures the mailer
 #
