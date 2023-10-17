@@ -9,17 +9,19 @@ import Config
 
 config :todo_list,
   ecto_repos: [TodoList.Repo],
-  generators: [timestamp_type: :utc_datetime]
+  generators: [timestamp_type: :utc_datetime],
 
-# Pow Configuration
-pow: [
-  user: TodoList.Users.User,
-  repo: TodoList.Repo,
-  adapter: Pow.Ecto.Repo,
-  layout: {TodoListWeb.LayoutView, "page.html"},
-  error_view: TodoListWeb.ErrorView,
-  routes: TodoListWeb.Router
-]
+  # Pow Configuration
+  pow: [
+    user: TodoList.Users.User,
+    repo: TodoList.Repo,
+    adapter: Pow.Ecto.Repo,
+    layout: {TodoListWeb.LayoutView, "page.html"},
+    error_view: TodoListWeb.ErrorView,
+    routes: TodoListWeb.Router
+  ]
+
+# Other configurations remain the same...
 
 # Configures the endpoint
 config :todo_list, TodoListWeb.Endpoint,
